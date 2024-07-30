@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container > h2{
+            font-family: sans-serif;
+            color:midnightblue;
+        }
+        .container > h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color:tomato;
+        }
+        .list{
+            font-size : 30px;
+        }
+        .NavyClass{
+            color:navy;
+            font-size: 35px;
+        }
+        .TealClass{
+            color:teal;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+
+    </div>
+    
+</body>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+    // React
+    /// ReactDOM
+
+    // function CartPage(){
+    //    return (<div><h2>Hello World</h2></div>)
+    // }
+
+    function CartPage(){
+        let fruits = ["apple" , "orange" , "grapes" , "pineapple"]
+        let nameOfList = "list"
+        
+       return (
+        <>
+          <ol>
+            {
+                fruits.map((ele , i)=>{
+
+                    // index => even indexed elements should have Teal color and 
+                    // odd indexed elements should have Navy
+                    return (<li className={i%2 ? "NavyClass" : "TealClass"}>{ele}</li>)
+                    // <li className="list">
+                })
+            }
+         </ol>
+        </>    
+    )
+    }
+
+
+//   (=>first point of contact is gonna be HTML)
+//   {=> first point of contact is gonna be JS}
+
+    // 1%2 => 1
+    // 2%2 => 0
+
+    // i%2 => if output is 1 (truthy value) => odd
+    // i%2 => if output is 0 (falsy vlaue) => Even
+
+    // <li>apple</li>
+    // <li>orange</li>
+
+    // container => h2 => sans-sherif : midnight blue
+    // container => h1 => your favouraite : Tomato
+
+    // JSX interpolation => {}
+
+    // React Fragment => consider it as a placeholder parent it can be written as <></> 
+    //  <React.Fragment></React.Fragment>
+
+    // <div>
+    //     <h2>Hello world</h2>
+    //     </div>
+
+let root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<CartPage/>)
+// root.render(CartPage())
+
+//JSX => Java Script's Markup Lang.
+
+</script>
+
+<!-- 
+import { jsx as _jsx } from "react/jsx-runtime";
+let root = ReactDOM.createRoot(document.getElementById("root"));
+root.render( JSX("h2", {
+  children: " This is my first React Page .  "
+})); -->
+<!-- 
+createElement("h2" , {id : "container"} , "This is my first React Page . ") -->
+
+
+<!-- 
+JS => <div><img src={variable}></div>   // declarative (for your own understanding) => JS will not understand
+
+| => transpiler => Babel
+
+- let container = document.createElement("div")
+- let img = document.createElement("img")
+- img.src = "link.com"
+- container.append(img)
+- body.append(container)
+
+img.src = variable -->
+
+
+
+<!-- let a = 10
+
+console.log(10+a)
+
+
+
+
+1 0  -->
+
+
+
+
+</html>
