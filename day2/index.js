@@ -2,38 +2,38 @@
 
 
 
-const Navbar =(user) =>{
-    console.log(user)
+const Navbar =(props) =>{
+    // console.log(user)
+    return (
+        
+// this is for refrencer 
+       
+        <div>
+            <h2>navbar1{props.user} <i> !{props.greeting}</i></h2>
+        </div>
+    )
+}
+ //               destructer here 
+const Content =({user, greeting}) =>{
+    // console.log(user)
     return (
         
 
        
         <div>
-            <h2>navbar1{user}</h2>
+            <h2> content{user} <i>!{greeting}</i></h2>
         </div>
     )
 }
 
-const Content =(user) =>{
-    console.log(user)
+const Footer =({user, greeting}) =>{
+    // console.log(user)
     return (
         
 
        
         <div>
-            <h2> content{user}</h2>
-        </div>
-    )
-}
-
-const Footer =(user) =>{
-    console.log(user)
-    return (
-        
-
-       
-        <div>
-            <h2>footer{user}</h2>
+            <h2>footer{user}<i>!{greeting}</i></h2>
         </div>
     )
 }
@@ -41,6 +41,7 @@ const Footer =(user) =>{
 // camplie the all function here 
 const App =() =>{
     let user = "Chota Bheem"
+    let greeting = "Good morning"
 
     return (
         <>
@@ -48,9 +49,9 @@ const App =() =>{
         {/* {Navbar()}  // this is also one way to call 
         {Content()}
         {Footer(user)} */}
-        <Navbar />
-        <Content />
-        <Footer />
+        <Navbar user={user} greeting={greeting} />
+        <Content user={user} greeting={greeting} />
+        <Footer user={user} greeting={greeting} />
 
         </>
     )
@@ -67,4 +68,10 @@ root.render(<App />)
 // root.render(<Content />)
 // root.render(<Footer/>)
 
-//
+// attribute can be used to share props (parameter) from parent to child 
+// this is in terms of key - value pair 
+
+// props =(
+// user :user
+// greeting : greeting
+// )
