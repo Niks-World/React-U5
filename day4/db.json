@@ -1,0 +1,30 @@
+
+{
+    "users" : {
+        "user1" : {
+            "username" : "walter" , 
+            "email" : "walter@gmail.com" , 
+            "passoword" : "12345"
+        },
+        "user2" : {
+            "username" : "john" , 
+            "email" : "john@gmail.com" , 
+            "passoword" : "12345"
+        },
+        "user3" : {
+            "username" : "Alan" , 
+            "email" : "Alan@gmail.com" , 
+            "passoword" : "12345"
+        },
+        "user4" : {
+            "username" : "bheem" , 
+            "email" : "bheem@gmail.com" , 
+            "passoword" : "12345"
+        },
+        "user5" : {
+            "username" : "Raju" , 
+            "email" : "raju@gmail.com" , 
+            "passoword" : "12345"
+        }
+    }
+}
