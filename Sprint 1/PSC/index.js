@@ -48,6 +48,7 @@ const Form = ({fetchData})=>{
 
 const ShowData = ({fetchData , data})=>{
 
+    // update on click
     const handleUpdate = (id , ele)=>{
             let nameUpdate = prompt("Enter updated Name : " , ele.name)
             let descUpdate = prompt("Enter new Desc" , ele.description)
